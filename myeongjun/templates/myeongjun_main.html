@@ -1,0 +1,259 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.83.1">
+    <title>명준 | 철산주공 8단지</title>
+
+    <!-- <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/carousel/"> -->
+
+    <!-- 폰트 -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+
+
+    <!-- 이거 두개는 무조건 불러오기 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    
+    <!-- 얘는 이런식으로 바꾸기 -->
+    <!-- <link href="../static/css/carousel.css" rel="stylesheet"> -->
+    <link href="{% static 'css/carousel.css' %}" rel="stylesheet">
+
+    <!-- Bootstrap core CSS -->
+    <!-- <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+
+      * {
+        font-family: 'Gamja Flower', cursive;
+        /* font-family: 'Nanum Pen Script', cursive; */
+        font-size: 1.125rem;
+      }
+
+
+    </style>
+
+
+    
+
+  </head>
+  <body>
+        
+    <header>
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color: #08cc8b;">
+
+        <div class="container-fluid">
+
+          <a class="navbar-brand" href="{% url 'home' %}">Home</a>
+          <!-- Django 내에 있는 홈(기존 메인)으로 연결해야됨 -->
+
+          <!-- ?? -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+              
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{% url 'myeongjun_main' %}">철산주공</a>
+              </li>
+              
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="https://www.instagram.com/explore/tags/%EC%B2%A0%EC%82%B0%EC%A3%BC%EA%B3%B58%EB%8B%A8%EC%A7%80/">8단지 instagram</a>
+              </li>
+              
+            </ul>
+
+            <!-- 검색박스 -->
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+
+
+          </div>
+        </div>
+      </nav>
+    </header>
+
+
+    
+
+    <main>
+      
+      <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+        
+        <!-- 밑에 있는 짝대기 -->
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          
+        </div>
+        
+
+        <!-- 컬럼 시작 -->
+        
+        <div class="carousel-inner">
+
+          <div class="carousel-item active">
+            <img src = "{% static 'img/8단지 메인.jpg' %}" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
+
+            
+            <div class="container">
+              <div class="carousel-caption text-start"> 
+                <h1><a style="background-color: #08cc8b; font-size: 3.5rem;">철산주공 8단지</a></h1>
+                <p><a style="background-color: #08cc8b; font-size: 2rem;">올해 3월부터 재건축이 시작된 동네. 추억에 남아있는 8단지를 소개합니다!</a></p>
+                <p><a class="btn btn-lg btn-success" href="{% url 'gallery' %}">둘러보기</a></p>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="carousel-item">
+            <img src = "{% static 'img/8단지 인스타.jpg' %}" class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></img>
+            
+            <div class="container">
+              <div class="carousel-caption">
+                <h1><a style="background-color: #08cc8b; font-size: 3.5rem;">8단지 인스타그램</a></h1>
+                <p><a style="background-color: #08cc8b; font-size: 2rem;">인스타에 "#철산주공 8단지"을 검색해 보세요! (위에도 링크 있지롱)</a></p>
+                <p><a style="background-color: #08cc8b; font-size: 2rem;">스냅샷 쵤영지로도 유명하답니다 :-)</a></p>
+                <p><a class="btn btn-lg btn-success" href="https://www.instagram.com/explore/tags/%EC%B2%A0%EC%82%B0%EC%A3%BC%EA%B3%B58%EB%8B%A8%EC%A7%80/">instagram</a></p>
+              </div>
+            </div>
+          </div>
+
+
+
+        </div>
+
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+
+      </div>
+
+
+      <!-- Marketing messaging and featurettes
+      ====================================================================================================================== -->
+      <!-- Wrap the rest of the page in another container to center all the content. -->
+
+      <div class="container marketing">
+
+        <!-- Three columns of text below the carousel -->
+        <div class="row">
+
+          <div class="col-lg-4">
+            <img src = "{% static 'img/동네 커버.jpg' %}" class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/></svg>
+
+            <h2 style ="padding-top: 40px;">사진 더 없어??</h2>
+            <p>8단지는 초록초록해요. 봄에 피는 다양한 꽃들과 여름 가을로 울창한 나무들이 많이 있어요.</p>
+            <p><a class="btn btn-success" id="dddd" href="{% url 'gallery' %}">사진 보러가기 &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+
+
+          <div class="col-lg-4">
+            <img src = "{% static 'img/카페.jpg' %}" class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/></svg>
+            
+            <h2 style ="padding-top: 40px;" >카페&맛집 없을까...</h2>
+            <p>물론 있어요! 8단지 주변에 있는 카페와 맛집을 소개해드립니다! 놀러오세요오~!~!~!</p>
+            <p><a class="btn btn-success" href="{% url 'cafe' %}">맛집 보러가기 &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+
+          
+          <div class="col-lg-4">
+            <img src = "{% static 'img/지도.jpg' %}" class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/></svg>
+            
+            <h2 style ="padding-top: 40px;">8단지 어떻게 가?</h2>
+            <p>8단지는 사실 지금 출입 금지 입니다ㅜㅜ 그래도 8단지의 위치를 알려드려요! (학교랑 가깝습니다 속닥)</p>
+            <p><a class="btn btn-success" href="{% url 'load_map' %}">지도 보러가기 &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+        </div><!-- /.row -->
+
+
+        <!-- START THE FEATURETTES -->
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+          <div class="col-md-7">
+            <h2 class="featurette-heading">8단지를 이제 못들어간다고?? <span class="text-muted">네 마자요ㅜㅜ</span></h2>
+            <p class="lead">철산주공 8,9단지는 오래된 단지에요. 올해 2월부터 재건축이 시작되었습니다.</p>
+            <p class="lead">저렇게 벚꽃이 이쁘게 폈는데 관계자분들이 막고계셔요ㅜㅜ</p>
+            <p class="lead">저희 가족도 20년 8단지 인생을 마무리하고 이사를 갔답니다ㅎㅎ</p>
+            <p class="lead">(사실 아직 본격적인 공사가 시작 안돼서 몰래 들어가면 사람 없고 딱이에요!)</p>
+          </div>
+          <div class="col-md-5">
+            <img src = "{% static 'img/8단지 폐쇄.jpg' %}" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/></svg>
+            <p>몰래 들어갔다 나온 김명준을 미쳐 확인 못한 관계자들의 모습이다</p>
+          </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+          <div class="col-md-7 order-md-2">
+            <h2 class="featurette-heading">너가 그렇게 8단지를 잘 알아?? <span class="text-muted">8단지 홍보대사 김명준</span></h2>
+            <p class="lead">광명시 철산2동에 있는 8단지로 세 살때 이사를 왔어요!</p>
+            <p class="lead">제 친구들도 대부분 광명 토박이라 어렸을때 부터 뛰어놀면서 한동네에서 계속 지내왔어요.</p>
+            <p class="lead">그래서 그런지 재건축을 하게되어 많이 아쉬운것 같아요</p>
+            <p class="lead">이사를 갔지만 지금도 친구들 만나러 이쪽 주변으로 자주 놀러갑니다</p>
+            
+          </div>
+          <div class="col-md-5 order-md-1">
+            <img src = "{% static 'img/8단지 나.jpg' %}" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <p>홍보를 위해 계속해서 사진을 찍고 있는 모습이다</p>
+          </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+      
+
+        <!-- /END THE FEATURETTES -->
+
+      </div><!-- /.container -->
+
+
+      <!-- FOOTER -->
+      <footer class="container">
+        <p class="float-end"><a href="#">위로 위로 맨위로</a></p>
+      </footer>
+      
+    </main>
+
+
+        <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+
+          
+  </body>
+</html>
